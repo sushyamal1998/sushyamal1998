@@ -1,16 +1,13 @@
-## Hi there 👋
+# Customer Churn Analysis in Telcom Using Exploratory Data Analysis(EDA)
 
-<!--
-**sushyamal1998/sushyamal1998** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+## Project Overview
 
-Here are some ideas to get you started:
+**Project Title**: Customer Churn Analysis
+In this project, we explore the Telco Customer Churn dataset to uncover patterns and insights about customer behavior. The primary goal is to understand what factors  contribute to customer churn, i.e why customers leave the service.
+This Exploratory Data Analysis (EDA) project includes:
+**Data cleaning and preprocessing**
+**Univariate and bivariate analysis**
+**Visualization of churn patterns**
+**Statistical summaries**
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+
