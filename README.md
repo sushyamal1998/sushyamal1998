@@ -15,13 +15,12 @@ This Exploratory Data Analysis (EDA) project includes:
 ### 1: Data Loading and Cleaning
 - Import necessary python library:
 
-<pre>
 ```python
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-</pre>```
+```
 
 
 
