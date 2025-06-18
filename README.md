@@ -23,7 +23,8 @@ import seaborn as sns
 ```
 - Import Dataset:
 ```python
-df = pd.read_csv("/content/WA_Fn-UseC_-Telco-Customer-Churn.csv")```
+df = pd.read_csv("/content/WA_Fn-UseC_-Telco-Customer-Churn.csv")
+```
 
 
 
