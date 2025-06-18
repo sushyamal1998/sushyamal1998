@@ -25,7 +25,16 @@ import seaborn as sns
 ```python
 df = pd.read_csv("/content/WA_Fn-UseC_-Telco-Customer-Churn.csv")
 ```
+- data Cleaning:
 
+
+  ```python
+  for col in df.columns:
+    if df[col].dtype == 'object': 
+        has_empty = df[col].str.strip().eq("").any()
+        if has_empty:
+            print(f"Column '{col}' contains empty or blank strings.")
+  ```
 
 
 
