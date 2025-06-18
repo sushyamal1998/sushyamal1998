@@ -29,6 +29,7 @@ df = pd.read_csv("/content/WA_Fn-UseC_-Telco-Customer-Churn.csv")
 
 
   ```python
+  # check column for empty string or empty space.
   for col in df.columns:
     if df[col].dtype == 'object': 
         has_empty = df[col].str.strip().eq("").any()
