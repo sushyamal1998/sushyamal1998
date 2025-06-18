@@ -13,11 +13,16 @@ This Exploratory Data Analysis (EDA) project includes:
 -  **Statistical summaries**
 
 ### 1: Data Loading and Cleaning
-- Import necessary python library:<br> import pandas as pd,
-import numpy as np, import matplotlib.pyplot as plt, import seaborn as sns
-<pre>'''python#
-df = pd.read_csv("/content/WA_Fn-UseC_-Telco-Customer-Churn.csv") df.head()
-'''</pre> 
+- Import necessary python library:
+
+  <pre>```python
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+```   
+  </pre>
+
 
 
 
