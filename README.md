@@ -8,7 +8,7 @@ In this project, we explore the Telco Customer Churn dataset to uncover patterns
 This Exploratory Data Analysis (EDA) project includes:
 <br>
 -  **Data loading, cleaning and preprocessing**<br>
--  **Univariate, bivariate and multivariate analysis**<br>
+-  **Exploratory Data Analysis**<br>
 -  **Visualization of churn patterns**<br>
 -  **Statistical summaries**
 
@@ -60,6 +60,10 @@ df = pd.read_csv("/content/WA_Fn-UseC_-Telco-Customer-Churn.csv")
   
   df['SeniorCitizen'] = df['SeniorCitizen'].apply(conv)
 ```
+
+
+### 2: Exploratory Data Analysis(EDA)
+
 
 
 
