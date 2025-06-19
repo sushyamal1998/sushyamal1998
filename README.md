@@ -37,11 +37,29 @@ df = pd.read_csv("/content/WA_Fn-UseC_-Telco-Customer-Churn.csv")
             print(f"Column '{col}' contains empty or blank strings.")
   ```
 ```python
-# replace empty string with 0
-df['TotalCharges'] = df['TotalCharges'].replace(" ", 0)
-df['TotalCharges'] = df['TotalCharges'].astype(float)
+  # replace empty string with 0
+  df['TotalCharges'] = df['TotalCharges'].replace(" ", 0)
+  df['TotalCharges'] = df['TotalCharges'].astype(float)
 ```
 
+```python
+ # checking for null values
+ df.isnull().sum()
+```
+
+```python
+ df.duplicated().sum()
+```
+```python
+  #converted 0 and 1 values of senior citizen to Yes/No.
+  def conv(value):
+    if value == 0:
+      return "Yes"
+    else:
+      return "No"
+  
+  df['SeniorCitizen'] = df['SeniorCitizen'].apply(conv)
+```
 
 
 
