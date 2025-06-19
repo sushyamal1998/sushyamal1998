@@ -90,11 +90,102 @@ df = pd.read_csv("/content/WA_Fn-UseC_-Telco-Customer-Churn.csv")
     plt.ylabel("Number of Customers", fontsize=12)
     plt.show() 
   ```
-  **conclusion->** A large number of customer habe very sort tenure(1-2 month), means some customer leaves sortly sfter joining.<br> There is also so manny long term customer.
-  
-  
+  **conclusion->** A large number of customer habe very sort tenure(1-2 month), means some customer leaves sortly after joining.<br> There is also so manny long term customer.
 
+- **Bivariate analysis**:
+  ```python
+    plt.figure(figsize = (4,4))
+    ax = sns.countplot(x= 'gender', hue = 'Churn',data = df)
+    for container in ax.containers:
+      ax.bar_label(container)
+    plt.xticks(rotation = 45)
+    plt.xlabel("Gender")
+    plt.ylabel("Count")
+    plt.title("churn by gender")
+    plt.show()
+  ```
+  **conclusion->** Ratio of gender of customer are same and there churn ratio almost same
 
+ - **Bivariate analysis**:
+   ```python
+    plt.figure(figsize = (8,4))
+    sns.histplot(x= 'tenure', bins = 30, hue = 'Churn', data = df)
+    plt.title("Customer Tenure vs. Churn", fontsize=14, fontweight='bold')
+    plt.xlabel("Tenure (in months)", fontsize=12)
+    plt.ylabel("Number of Customers", fontsize=12)
+    plt.tight_layout()
+    plt.show() 
+   ```
+   **conclusion->** customer with low tenure(1-10month) has higher churn rate and customer with median to higher have less churn rate.
+
+ - **bivariate analysis**:
+   ```python
+      ax = sns.countplot(x= df['Contract'], hue = df['Churn'])
+      for container in ax.containers:
+          ax.bar_label(container)
+      plt.title("Churn by Contract Type")
+      plt.xlabel("Contract Type")
+      plt.ylabel("Number of Customers")
+      plt.legend(title='Churn Status')
+      plt.tight_layout()
+      plt.show()  
+   ```
+   **conclusion->** customer with month to month contract have higher churn rate and who habe one or two year contract less churn rate.
+
+ - **Bivariate analysis**:
+   ```python
+      cols = ['PhoneService', 'MultipleLines', 'InternetService',
+       'OnlineSecurity', 'OnlineBackup', 'DeviceProtection',
+       'TechSupport', 'StreamingTV', 'StreamingMovies']
+
+      n_cols = 3
+      n_rows = (len(cols)+n_cols-1)// n_cols
+      fig,axes = plt.subplots(n_rows,n_cols,figsize= (15,12))
+      axes = axes.flatten()
+      for i, col in enumerate(cols):
+        sns.countplot(x =col, ax = axes[i], hue = 'Churn', data = df)
+        axes[i].set_title(col)
+        axes[i].set_ylabel("Count")
+        axes[i].tick_params(axis='x', rotation=45)
+      plt.tight_layout()
+      plt.show()  
+
+   ```
+
+- **multivariate analysis of monthly charges vs tenure, color by churn**:
+  ```python
+  plt.figure(figsize=(10,6))
+  sns.scatterplot(x='tenure', y='MonthlyCharges', hue='Churn',data=df)
+  plt.title("Tenure vs Monthly Charges colored by Churn")
+  plt.xlabel("Tenure (months)")
+  plt.ylabel("Monthly Charges")
+  plt.grid(True)
+  plt.tight_layout()
+  plt.show()
+  ```
+  **conclusion->**
+
+- **multivariate analysis : monthly charges by payment method and churn**:
+  ```python
+    plt.figure(figsize=(10,6))
+    sns.boxplot(x='PaymentMethod', y='MonthlyCharges', hue='Churn', data=df)
+    plt.title("Monthly Charges by Payment Method and Churn")
+    plt.xticks(rotation=45)
+    plt.tight_layout()
+    plt.show()
+  ```
+  **conclusion->**
+
+- **heatmap of corelation between numeric features**:
+  ```python
+    df['TotalCharges'] = pd.to_numeric(df['TotalCharges'], errors='coerce')
+    plt.figure(figsize=(6,4))
+    sns.heatmap(df[['tenure', 'MonthlyCharges', 'TotalCharges']].corr(), annot=True, cmap='coolwarm')
+    plt.title("Correlation Between Numeric Features")
+    plt.tight_layout()
+    plt.show()
+  ```
+  **conclusion->** 
 
 
 
