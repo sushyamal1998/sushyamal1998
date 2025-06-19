@@ -90,7 +90,7 @@ df = pd.read_csv("/content/WA_Fn-UseC_-Telco-Customer-Churn.csv")
     plt.ylabel("Number of Customers", fontsize=12)
     plt.show() 
   ```
-- **conclusion->** A large number of customer habe very sort tenure(1-2 month), means some customer leaves sortly sfter joining.<br> There is also so manny long term customer.
+  **conclusion->** A large number of customer habe very sort tenure(1-2 month), means some customer leaves sortly sfter joining.<br> There is also so manny long term customer.
   
   
 
