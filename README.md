@@ -64,6 +64,14 @@ df = pd.read_csv("/content/WA_Fn-UseC_-Telco-Customer-Churn.csv")
 
 ### 2: Exploratory Data Analysis(EDA)
 
+- **Univariate analysis of categorical variable churn** :
+  ```python
+  plt.figure(figsize = (4,4))
+ax = sns.countplot(x= 'Churn', data = df)
+ax.bar_label(ax.containers[0])
+plt.title("count of customer by churn")
+plt.show()
+```
 
 
 
