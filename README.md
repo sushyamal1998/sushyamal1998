@@ -73,6 +73,9 @@ df = pd.read_csv("/content/WA_Fn-UseC_-Telco-Customer-Churn.csv")
   plt.show()
 ```
 
+- **Pie chart of percentage of churn customer**:
+
+
 
 
 
