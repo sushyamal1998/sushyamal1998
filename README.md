@@ -8,7 +8,7 @@ In this project, we explore the Telco Customer Churn dataset to uncover patterns
 This Exploratory Data Analysis (EDA) project includes:
 <br>
 -  **Data loading, cleaning and preprocessing**<br>
--  **Univariate and bivariate analysis**<br>
+-  **Univariate, bivariate and multivariate analysis**<br>
 -  **Visualization of churn patterns**<br>
 -  **Statistical summaries**
 
@@ -36,6 +36,12 @@ df = pd.read_csv("/content/WA_Fn-UseC_-Telco-Customer-Churn.csv")
         if has_empty:
             print(f"Column '{col}' contains empty or blank strings.")
   ```
+```python
+# replace empty string with 0
+df['TotalCharges'] = df['TotalCharges'].replace(" ", 0)
+df['TotalCharges'] = df['TotalCharges'].astype(float)
+```
+
 
 
 
