@@ -71,7 +71,35 @@ df = pd.read_csv("/content/WA_Fn-UseC_-Telco-Customer-Churn.csv")
   ax.bar_label(ax.containers[0])
   plt.title("count of customer by churn")
   plt.show()
- ```
+  ```
+  **conclusion->** most customer did not churn 
+- **pie chart of percentage of churn customer**:
+  ```python
+  plt.figure(figsize = (4,5))
+  plt.pie(df['Churn'].value_counts(), labels = df['Churn'].value_counts().index, autopct = '%1.1f%%')
+  plt.title('Percentages Of Churn Customer', fontsize = 10)
+  plt.show()
+  ```
+
+- **univariate analysis of numerical variable tenure**:
+  ```python
+    plt.figure(figsize = (4,4))
+    sns.histplot(df['tenure'])
+    plt.title("Distribution of Customer Tenure", fontsize=14)
+    plt.xlabel("Tenure (in months)", fontsize=12)
+    plt.ylabel("Number of Customers", fontsize=12)
+    plt.show() 
+  ```
+- **conclusion->** A large number of customer habe very sort tenure(1-2 month), means some customer leaves sortly sfter joining.<br> There is also so manny long term customer.
+  
+  
+
+
+
+
+
+
+
 
 
 
