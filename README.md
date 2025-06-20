@@ -8,9 +8,9 @@ In this project, we explore the Telco Customer Churn dataset to uncover patterns
 This Exploratory Data Analysis (EDA) project includes:
 <br>
 -  **Data loading, cleaning and preprocessing**<br>
--  **Exploratory Data Analysis**<br>
--  **Visualization of churn patterns**<br>
--  **Statistical summaries**
+-  **Univariate Analysis**<br>
+-  **Bivariate Analysis**<br>
+-  **Multivariate Analysis**
 
 ## Tools and Libraries used:
 - **Python**
@@ -18,6 +18,12 @@ This Exploratory Data Analysis (EDA) project includes:
 - **Matplotlib and Seaborn->** for visualization
 - **Google Colab->** for interactive analysis
 
+## Dataset:
+- **Source->** Kaggle - Telco Customer Churn
+- **Rows->** 7043
+- **Columns->** 21 features including customerid, gender,churn etc.
+
+  
 ### 1: Data Loading and Cleaning
 - Import necessary python library:
 
@@ -169,7 +175,6 @@ df = pd.read_csv("/content/WA_Fn-UseC_-Telco-Customer-Churn.csv")
   plt.tight_layout()
   plt.show()
   ```
-  **Conclusion->**
 
 - **Multivariate analysis : monthly charges by payment method and churn**:
   ```python
@@ -180,7 +185,6 @@ df = pd.read_csv("/content/WA_Fn-UseC_-Telco-Customer-Churn.csv")
     plt.tight_layout()
     plt.show()
   ```
-  **Conclusion->**
 
 - **Heatmap of corelation between numeric features**:
   ```python
@@ -191,7 +195,12 @@ df = pd.read_csv("/content/WA_Fn-UseC_-Telco-Customer-Churn.csv")
     plt.tight_layout()
     plt.show()
   ```
-  **Conclusion->** 
+  **Conclusion->** Stronger correlation between Tenure and TotalCharges.
+
+## Conclusion: 
+This EDA helped surface valuable insights into customer churn behavior. The analysis can support telecom companies in building targeted retention strategies, especially focused on:
+- Improving the experience of new users in the first few months
+- Addressing issues for high-paying users who churn early
 
 
 
