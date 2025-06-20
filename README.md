@@ -12,6 +12,12 @@ This Exploratory Data Analysis (EDA) project includes:
 -  **Visualization of churn patterns**<br>
 -  **Statistical summaries**
 
+## Tools and Libraries used:
+- **Python**
+- **pandas->** for data manipulation
+- **Matplotlib and Seaborn->** for visualization
+- **Google Colab->** for interactive analysis
+
 ### 1: Data Loading and Cleaning
 - Import necessary python library:
 
@@ -116,9 +122,9 @@ df = pd.read_csv("/content/WA_Fn-UseC_-Telco-Customer-Churn.csv")
     plt.tight_layout()
     plt.show() 
    ```
-   **conclusion->** customer with low tenure(1-10month) has higher churn rate and customer with median to higher have less churn rate.
+   **conclusion->** Customer with low tenure(1-10month) has higher churn rate and customer with median to higher have less churn rate.
 
- - **bivariate analysis**:
+ - **Bivariate analysis**:
    ```python
       ax = sns.countplot(x= df['Contract'], hue = df['Churn'])
       for container in ax.containers:
@@ -130,7 +136,7 @@ df = pd.read_csv("/content/WA_Fn-UseC_-Telco-Customer-Churn.csv")
       plt.tight_layout()
       plt.show()  
    ```
-   **conclusion->** customer with month to month contract have higher churn rate and who habe one or two year contract less churn rate.
+   **Conclusion->** Customer with month to month contract have higher churn rate and who habe one or two year contract less churn rate.
 
  - **Bivariate analysis**:
    ```python
@@ -152,7 +158,7 @@ df = pd.read_csv("/content/WA_Fn-UseC_-Telco-Customer-Churn.csv")
 
    ```
 
-- **multivariate analysis of monthly charges vs tenure, color by churn**:
+- **Multivariate analysis of monthly charges vs tenure, color by churn**:
   ```python
   plt.figure(figsize=(10,6))
   sns.scatterplot(x='tenure', y='MonthlyCharges', hue='Churn',data=df)
@@ -163,9 +169,9 @@ df = pd.read_csv("/content/WA_Fn-UseC_-Telco-Customer-Churn.csv")
   plt.tight_layout()
   plt.show()
   ```
-  **conclusion->**
+  **Conclusion->**
 
-- **multivariate analysis : monthly charges by payment method and churn**:
+- **Multivariate analysis : monthly charges by payment method and churn**:
   ```python
     plt.figure(figsize=(10,6))
     sns.boxplot(x='PaymentMethod', y='MonthlyCharges', hue='Churn', data=df)
@@ -174,9 +180,9 @@ df = pd.read_csv("/content/WA_Fn-UseC_-Telco-Customer-Churn.csv")
     plt.tight_layout()
     plt.show()
   ```
-  **conclusion->**
+  **Conclusion->**
 
-- **heatmap of corelation between numeric features**:
+- **Heatmap of corelation between numeric features**:
   ```python
     df['TotalCharges'] = pd.to_numeric(df['TotalCharges'], errors='coerce')
     plt.figure(figsize=(6,4))
@@ -185,7 +191,7 @@ df = pd.read_csv("/content/WA_Fn-UseC_-Telco-Customer-Churn.csv")
     plt.tight_layout()
     plt.show()
   ```
-  **conclusion->** 
+  **Conclusion->** 
 
 
 
